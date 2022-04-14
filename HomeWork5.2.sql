@@ -425,7 +425,7 @@ insert into cars (id, brand, model, year_of_issue, price, color) values (400, 'A
 --15 select * from cars order by price desc limit 10;
 --16 select * from cars order by year_of_issue desc OFFSET 5 limit 10;
 --17 select * from cars where year_of_issue <= 1995 or year_of_issue >= 2010;
---18 select max(color), count(color) from cars where color = (select max(color) from cars);
+--18 select color, count(*) from cars group by color order by count(*) desc;
 
 
 
