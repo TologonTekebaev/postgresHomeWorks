@@ -419,7 +419,7 @@ insert into cars (id, brand, model, year_of_issue, price, color) values (400, 'A
 --9 select * from cars where model like 'T%';
 --10 select * from cars where model like '%e';
 --11 select * from cars where length(brand)between 5 and 5;
---12 select count(brand) from cars where brand like 'Mercedes-Benz';
+--12 select sum(price) from cars where cars.brand = 'Mercedes-Benz';
 --13 select * from cars where price = (select max(price)from cars) or  price = (select min(price)from cars );
 --14 select * from cars where brand not like 'Toyota';
 --15 select * from cars order by price desc limit 10;
